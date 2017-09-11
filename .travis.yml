@@ -20,7 +20,9 @@ cache:
 deploy:
   - provider: script
     skip_cleanup: true
-    script: "sh gradlew githubRelease bintrayUpload curseforge --continue"
+# CurseForgeやBintrayのAPIなどが準備できたらこっち
+#    script: "sh gradlew githubRelease bintrayUpload curseforge --continue"
+    script: "sh gradlew githubRelease --continue"
     on:
       all_branches: true
       condition: '! "$TRAVIS_BRANCH" =~ ^dev\\-.*$'
