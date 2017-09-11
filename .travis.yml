@@ -4,12 +4,11 @@ branches:
   except:
     - /^b[0-9]/
 before_install:
-  - chmod a+x gradlew
-  - ./gradlew clean
-install: "./gradlew setupCIWorkspace --continue"
-script: "./gradlew build --continue"
-#after_success:
-#  - ./gradlew bintrayUpload --continue
+  - sh gradlew clean
+install:
+  - sh gradlew setupCIWorkspace --continue
+script:
+  - sh gradlew build --continue
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
   - rm -fr $HOME/.gradle/caches/*/plugin-resolution/

@@ -405,11 +405,7 @@ if (sec_github_key!=null&&project.isProperty('extra_github_owner')&&project.isPr
 		name = mod_changelog_title
 		body = mod_changelog
 		draft = false
-		def allassets = [jar]
-		subprojects.each { p ->
-			allassets.addAll([p.tasks.jar, p.tasks.jar, p.tasks.devJar, p.tasks.sourceJar, p.tasks.apiJar]*.outputs*.files*.asPath*.tr('\\','/'))
-		}
-		assets = allassets
+		assets = [jar, devJar, sourceJar, apiJar]*.outputs*.files*.asPath*.tr('\\','/')
 	}
 }
 
@@ -420,12 +416,10 @@ publishing {
 			artifactId = project.modid
 			version = "${mod_version}"
 			artifact jar
-			subprojects.each { p ->
-				artifact p.jar
-				artifact p.devJar
-				artifact p.sourceJar
-				artifact p.apiJar
-			}
+			artifact jar
+			artifact devJar
+			artifact sourceJar
+			artifact apiJar
 		}
 	}
 }
