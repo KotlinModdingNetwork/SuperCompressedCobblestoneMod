@@ -8,9 +8,7 @@ common/*
 
 # allow any
 !*.md
-!*.iml
 !src/
-!.idea/
 !gradle/
 !lib/
 !info/
