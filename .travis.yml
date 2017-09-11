@@ -18,13 +18,12 @@ cache:
     - $HOME/.gradle/caches/
     - $HOME/.gradle/wrapper/
 deploy:
-  provider: script
-  script:
-    - ./gradlew githubRelease bintrayUpload curseforge --continue
-  on:
-    all_branches: true
-    condition:
-      - ! "$TRAVIS_BRANCH" =~ ^dev\\-.*$
+  - provider: script
+    script:
+      - ./gradlew githubRelease bintrayUpload curseforge --continue
+    on:
+      all_branches: true
+      condition: ! "$TRAVIS_BRANCH" =~ ^dev\\-.*$
 notifications:
   email: false
   webhooks:
