@@ -1,4 +1,5 @@
-# SuperCompressedCobblestoneMod 
+[![Build Status](https://travis-ci.org/KotlinModdingNetwork/SuperCompressedCobblestoneMod.svg?branch=master)](https://travis-ci.org/KotlinModdingNetwork/SuperCompressedCobblestoneMod)
+# SuperCompressedCobblestoneMod
 
 ## 詳細/タスク
 超圧縮丸石mod.mdを見てください。
