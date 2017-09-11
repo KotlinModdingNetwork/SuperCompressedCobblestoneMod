@@ -20,10 +20,11 @@ cache:
 deploy:
   provider: script
   script:
-    - ./gradlew githubRelease --continue
+    - ./gradlew githubRelease bintrayUpload curseforge --continue
   on:
     all_branches: true
-    condition: "$TRAVIS_BRANCH =~ ^dev\\-.*$"
+    condition:
+      - ! "$TRAVIS_BRANCH" =~ ^dev\\-.*$
 notifications:
   email: false
   webhooks:
