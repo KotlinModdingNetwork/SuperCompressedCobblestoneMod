@@ -53,6 +53,7 @@ ext {
 	mod_travis = System.getenv('TRAVIS') as boolean
 	mod_buildnumber = System.getenv('TRAVIS_BUILD_NUMBER') as Integer
 	mod_buildtag = System.getenv('TRAVIS_TAG')
+	mod_buildcommit = System.getenv('TRAVIS_COMMIT')
 	mod_prerelease = mod_autorelease = mod_travis && StringUtils.isEmpty(mod_buildtag)
 
 	if (mod_buildtag!=null && mod_buildtag.startsWith(mod_build_prefix))
@@ -64,7 +65,7 @@ ext {
 	mod_artifacts_release_dir = file 'artifacts/release'
 
 	mod_git_repo = plugins.findPlugin('com.palantir.git-version').gitRepo(rootProject).repository
-	mod_git_head = mod_git_repo.getRef('HEAD').objectId.name()
+	mod_git_head = mod_git_repo.getRef(mod_buildcommit ?: 'HEAD').objectId.name()
 
 	def parseChangelog = { changelog ->
 		def title = null
