@@ -168,7 +168,7 @@ compileJava {
 	sourceCompatibility = targetCompatibility = "1.8"
 }
 
-version = mod_version
+version = "${version_minecraft}-${mod_version}"
 
 minecraft {
 	version = "${project.version_minecraft}-${project.version_forge}"
@@ -255,7 +255,6 @@ task cleanMakeStart(type: Delete) {
 jar {
 	from sourceSets.main.output
 	from sourceSets.api.output
-	classifier 'universal'
 	manifest commonManifest
 }
 
