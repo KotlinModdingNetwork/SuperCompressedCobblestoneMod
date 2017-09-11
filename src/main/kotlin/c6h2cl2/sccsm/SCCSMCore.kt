@@ -13,7 +13,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent
  * @author C6H2Cl2
  */
 
-@Mod(modid = MODID, name = NAME, version = VERSION, dependencies = DEPENDENCIES, useMetadata = true)
+@Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION, dependencies = Reference.DEPENDENCIES, useMetadata = true)
 class SCCSMCore {
 
     companion object {
