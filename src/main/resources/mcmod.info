@@ -1,0 +1,26 @@
+{
+	"modListVersion": 2,
+	"modList": [
+		{
+			"modid": "sccsm",
+			"name": "SuperCompressedCobblestoneMod",
+			"description": "You can compress cobblestone up to 500 Billion",
+			"mcversion": "${mcversion}",
+			"version": "${version}",
+			"authorList": [
+				"C6H2Cl2",
+				"Kamesuta"
+			],
+			"credits": "2017 KotlinModdingNetwork",
+			"dependants": [],
+			"dependencies": ["Forge@[${minforgeversion},)", "forgelin", "ExtraUtilities"],
+			"parent": "",
+			"requiredMods": ["Forge@[${minforgeversion},)", "forgelin"],
+			"logoFile": "",
+			"screenshots": [],
+			"updateUrl": "https://github.com/KotlinModdingNetwork/SuperCompressedCobblestoneMod/releases",
+			"url": "https://github.com/KotlinModdingNetwork/SuperCompressedCobblestoneMod/",
+			"useDependencyInformation": true
+		}
+	]
+}
