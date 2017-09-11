@@ -24,7 +24,7 @@ deploy:
     script: "sh gradlew githubRelease --continue"
     on:
       all_branches: true
-      condition: '! "$TRAVIS_BRANCH" =~ ^dev\\-.*$'
+      condition: '! "$TRAVIS_BRANCH" =~ ^(dev\\-|feature\\/).*$'
 notifications:
   email: false
   webhooks:
