@@ -434,7 +434,6 @@ publishing {
             artifactId = project.modid
             version = "${mod_version}"
             artifact jar
-            artifact jar
             artifact devJar
             artifact sourceJar
             artifact apiJar
