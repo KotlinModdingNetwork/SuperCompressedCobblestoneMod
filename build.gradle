@@ -26,7 +26,7 @@ ext {
 	assert project.isProperty('version_patch'): 'missing property: version_patch'
 
 	mod_travis = System.getenv('TRAVIS') as boolean
-	mod_buildnumber = System.getenv('TRAVIS_BUILD_NUMBER') as Integer
+	mod_buildnumber = System.getenv('TRAVIS_BUILD_NUMBER') as int
 	mod_buildtag = System.getenv('TRAVIS_TAG')
 	mod_prerelease = mod_autorelease = mod_travis && StringUtils.isEmpty(mod_buildtag)
 
